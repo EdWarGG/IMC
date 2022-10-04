@@ -87,13 +87,13 @@ public class IMC extends Application {
 		imc.bind(calcIMC);
 		
 		imc.addListener((o, ov, nv) -> {
-			if(nv.floatValue() < 18.5) 
+			if(nv.doubleValue() < 18.5) 
 				concLabel.setText("Bajo peso");
-			if(nv.floatValue() >= 18.5 && nv.floatValue() <= 25) 
+			if(nv.doubleValue() >= 18.5 && nv.doubleValue() <= 25) 
 				concLabel.setText("Normal");
-			if(nv.floatValue() >= 25 && nv.floatValue() <= 30) 
+			if(nv.doubleValue() >= 25 && nv.doubleValue() <= 30) 
 				concLabel.setText("Sobrepeso");
-			if(nv.floatValue() >= 30) 
+			if(nv.doubleValue() >= 30) 
 				concLabel.setText("Obeso");
 				
 		});
